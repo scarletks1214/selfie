@@ -30,7 +30,7 @@ This app is deployed to [firebase](https://selfie-everyday-app.firebaseapp.com/)
 ### `First Page`
 
 The first page includes google login/out buttons, camera, and gallery button.
-The captured image can be saved as a jpg file on google drive or local according to logged in state.
+The taken picture can be saved as a jpg file on google drive or local according to logged in state.
 
 [Google APIs](https://developers.google.com/drive/api/v3/about-auth) are used to login with google account
 
