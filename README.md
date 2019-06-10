@@ -4,25 +4,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The Selfies has 2 pages - Camera page and Gallery Page
 
-Camera page has react camera component, auth buttons and gallery button.
+Camera page has react camera component, auth buttons, and gallery button.
 
-Gallery page has a menu for generating gif files.
+The gallery page has a menu for generating gif files.
 
 The src folder is consist of container, components, config, utils and assets folders.
 
-'config' folder includes sort of settings info of the app while 'utils' folder includes apis functions to google drive and image utilities. 'containers' and 'components' folder includes components for pages, camera and gallery item components. 'assets' folder has an image - logo.png.
+'config' folder includes sort of settings info of the app while 'utils' folder includes apis functions to google drive and image utilities. 'containers' and 'components' folder includes components for pages, camera, and gallery item components. 'assets' folder has an image - logo.png.
 
 ### How the app is built
 
-components/CameraScreen component uses [react-html5-camera-photo](https://www.npmjs.com/package/react-html5-camera-photo) package to take a picture with front-facing camera.
-Captured image can be saved as a jpg file on google drive or local according to logged in state.
+components/CameraScreen component uses [react-html5-camera-photo](https://www.npmjs.com/package/react-html5-camera-photo) package to take a picture with a front-facing camera.
+The captured image can be saved as a jpg file on google drive or local according to logged in state.
 
-[file-saver](https://www.npmjs.com/package/file-saver) package is used to create image file from base64 code.
+[file-saver](https://www.npmjs.com/package/file-saver) package is used to create an image file from base64 code.
 The prefix of the saved image name has created date.(e.g. Selfie-2019-5-20-1558264796101.jpg)
 
-[Google APIs](https://developers.google.com/drive/api/v3/about-files) are used to create folder, fetch images and upload images to google drive.
+[Google APIs](https://developers.google.com/drive/api/v3/about-files) are used to create a folder, fetch images, and upload images to google drive.
 
-[gifshot](https://www.npmjs.com/package/gifshot) package is used to generating gif file from image list
+[gifshot](https://www.npmjs.com/package/gifshot) package is used to generating gif file from the selected image list
 
 User can select images that are necessary to create gif file in the gallery page.
 
