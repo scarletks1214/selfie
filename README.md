@@ -1,35 +1,45 @@
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ### Architecture
 
-User signs in the app with google account in the first page.
+1. Authentication
 
-If signed in user takes a picture, it is uploaded to 'Selfie-Webapp' folder in google drive.
-If non-signed in user takes a picture, it is downloaded to local.
+User signs in the app with google account on the first page.
+
+2. Taking a picture
+
+If a signed-in user takes a picture, it is uploaded to 'Selfie-Webapp' folder in google drive.
+If non-signed in user takes a picture, it is saved in local.
+
+3. View taken pictures and gif generation
 
 Signed in user can see his pictures in the gallery page.
 
-The gallery page shows all the images in the 'Selfie-Webapp' folder of google drive.
-Each gallery item is selectable and the user can generate a gif file with selected images.
+The gallery page shows all the pictures in the 'Selfie-Webapp' folder of google drive.
+Each gallery item is selectable and the user can generate a gif file with selected pictures.
 User can select the gif size with small/medium/large option.
 A generated gif file is downloaded to local.
 
+4. Pages hierarchy
+
 The Selfies has 2 pages - Camera page and Gallery Page
 
-Camera page has camera component, auth buttons, and gallery button.
+Camera page has a camera component, auth buttons, and gallery button.
 
-The gallery page has a menu for generating gif files.
+Gallery page has a menu for generating gif files.
 
 ### How the app is built
 
-This web app is built with create-react-app. Webcam is required to take a picture.
+This web app is built with create-react-app. A webcam is required to take a picture.
 
-It uses react-html5-camera-photo and some material ui components for UI.
 The project uses [code spliting](https://reactjs.org/docs/code-splitting.html) for performance optimization.
 
-This app is deployed to [firebase](https://selfie-everyday-app.firebaseapp.com/)
+This app is deployed to [https://selfie-everyday-app.firebaseapp.com](https://selfie-everyday-app.firebaseapp.com/)
 
 ### `First Page`
 
 The first page includes google login/out buttons, camera, and gallery button.
+
 The taken picture can be saved as a jpg file on google drive or local according to logged in state.
 
 [Google APIs](https://developers.google.com/drive/api/v3/about-auth) are used to login with google account
@@ -37,19 +47,19 @@ The taken picture can be saved as a jpg file on google drive or local according 
 [react-html5-camera-photo](https://www.npmjs.com/package/react-html5-camera-photo) package is used to take a picture with a front-facing camera.
 
 [file-saver](https://www.npmjs.com/package/file-saver) package is used to create an image file from the base64 code.
-The prefix of the saved image name has created date.(e.g. Selfie-2019-5-20-1558264796101.jpg)
+The prefix of the saved picture name has created date.(e.g. Selfie-2019-5-20-1558264796101.jpg)
 
 ### `Gallery Page`
 
-The second page(gallery) includes gif generating menu and a gallery that shows images in 'Sefie-Webapp' folder of google drive.
+The second page(gallery) includes gif generating menu and a gallery that shows pictures in 'Sefie-Webapp' folder of google drive.
 
-User can select images that are necessary to create a gif file in the gallery page.
+User can select pictures that are necessary to create a gif file in the gallery page.
 
 User can select gif width with small/medium/large options.
 
-[Google APIs](https://developers.google.com/drive/api/v3/about-files) are used to create a folder, fetch images, and upload images to google drive.
+[Google APIs](https://developers.google.com/drive/api/v3/about-files) are used to create a folder, fetch pictures, and upload pictures to google drive.
 
-[gifshot](https://www.npmjs.com/package/gifshot) package is used to generate gif file from the selected image list
+[gifshot](https://www.npmjs.com/package/gifshot) package is used to generate gif file from the selected picture list
 
 ### `Folder structure`
 
